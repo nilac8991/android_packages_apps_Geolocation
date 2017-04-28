@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.android.nilac.geolocation.MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Distance!"
+        android:id="@+id/button_get"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Starting Point"
+        android:textSize="30px"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/starting_text" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/starting_filed1"
+        android:hint="Road"
+        android:textStyle="italic"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/starting_filed2"
+        android:hint="City"
+        android:textStyle="italic"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/starting_filed1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/starting_field3"
+        android:hint="Country"
+        android:textStyle="italic"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/starting_filed2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Arrival Point"
+        android:textSize="30px"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/starting_field3"
+        android:id="@+id/arrival_text" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/arrival_filed1"
+        android:hint="Road"
+        android:textStyle="italic"
+        android:layout_alignTop="@+id/arrival_text"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/arrival_filed2"
+        android:hint="City"
+        android:textStyle="italic"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/arrival_filed1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/arrival_field3"
+        android:hint="Country"
+        android:textStyle="italic"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/arrival_filed2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transport Method"
+        android:textSize="30px"
+        android:id="@+id/transport_method"
+        android:layout_below="@+id/arrival_field3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <RadioGroup
+        android:id="@+id/transport_method_choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Car"
+        android:layout_below="@+id/transport_method"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:id="@+id/transport_method_car"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/transport_method"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/button_get"
+            android:layout_toStartOf="@+id/button_get"
+            android:text="Car" />
+
+        <RadioButton
+            android:id="@+id/transport_method_bike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bike"
+            android:layout_below="@+id/transport_method"
+            android:layout_toLeftOf="@+id/button_get"
+            android:layout_toStartOf="@+id/button_get"
+            android:layout_marginTop="5dp" />
+
+        <RadioButton
+            android:id="@+id/transport_method_walk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Walk"
+            android:layout_below="@+id/transport_method"
+            android:layout_toLeftOf="@+id/button_get"
+            android:layout_toStartOf="@+id/button_get"
+            android:layout_marginTop="5dp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_result2"
+        android:textSize="35px"
+        android:layout_below="@+id/textView_result1"
+        android:layout_toLeftOf="@+id/button_get"
+        android:layout_toStartOf="@+id/button_get"
+        android:layout_marginTop="20dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_result1"
+        android:textSize="35px"
+        android:layout_below="@+id/transport_method"
+        android:layout_alignLeft="@+id/textView_result2"
+        android:layout_alignStart="@+id/textView_result2"
+        android:layout_marginTop="30dp" />
+
+</RelativeLayout>
